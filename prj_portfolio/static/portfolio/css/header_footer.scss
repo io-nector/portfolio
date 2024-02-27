@@ -1,0 +1,114 @@
+
+// mobile nav
+@media screen and (max-width: 900px){
+    nav {
+        width: 10vw;
+        height: 100vh;
+        background-color: $lighter_color;
+    }
+}
+
+//desktop nav
+@media screen and (min-width: 900px){
+    .nav_container {
+        width: 15vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+
+        background-color: $dark_color;
+
+        .profile_image_container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+
+            img {
+                position: relative;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                z-index: 1;
+            }
+
+            h1 {
+                width: 100%;
+                height: fit-content;
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                margin: 0;
+                padding: 10px 0 10px 0;
+                
+                font-size: 2.4rem;
+                color: $lighter_color;
+                text-align: center;
+                font-family: $font_serif;
+                font-weight: bold;
+                
+                background-color: $accent_color_opacity;
+                
+                z-index: 100;
+            }
+        }
+
+        nav {
+            width: 100%;
+            height: auto;
+            // margin-top: 20px;
+
+            display: grid;
+            grid-template-rows: repeat(5, 1fr);
+            gap: 10px;
+            padding: 20px 0 20px 0;
+
+           .nav_item_container {
+            grid-row: span 1;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding:0 0 0 20%;
+           
+            a {
+                text-align: left;
+                text-decoration: none;
+                color: $light_color;
+                font-size: 1.2rem;
+                font-family: $font_general;
+                vertical-align: bottom;
+                font-weight: 400;
+
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+
+                    color:$lighter_color;
+                    transition: all .3s ease-in-out;
+                    cursor: pointer;
+                }
+            }
+            .icon {
+                width: fit-content;
+                font-family: 'Material Symbols Outlined', sans-serif;
+                font-size: 3.0rem;
+                vertical-align: middle;
+                font-weight: 200;
+                color: $light_color;
+            }      
+            }      
+        }
+    }
+
+    .main_container {
+        width: 85vw;
+        height: 100vh;
+        position: relative;
+        left: 15vw;
+        top: 0;
+        padding: 0;
+    }
+}

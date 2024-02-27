@@ -1,0 +1,24 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+
+
+{% block title %}
+{% endblock %}
+
+{% block stylesheets %}
+<link href="{% static 'portfolio/css/index.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block body %}
+    <img src="{% static 'portfolio/images/ocean two.jpeg' %}" alt="main_image">
+    <div class="main_image_text">
+        <h1>DEAN<span class="accent">WATSON</span></h1>
+        <h2>Web Developer</h2>
+    </div>
+{% endblock %}
+
+
+{% block javascripts %}
+{% endblock %}

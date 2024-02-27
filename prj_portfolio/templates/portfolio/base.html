@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        {% block title %}
+        {% endblock %}
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        {% block stylesheets %}
+        {% endblock %}
+
+    </head>
+    <body>
+        <div class="nav_container">
+            <div class="profile_image_container">
+                <img  src="{% static 'portfolio/images/blue-bg.png' %}" alt="">
+
+                <h1>Dean Watson</h1>
+            </div>
+            <nav>
+                <div class="nav_item_container">
+                    <span class="icon">house</span>
+                    <a href="{% url 'index' %}">&nbsp;&nbsp;HOME</a>
+                </div>
+                <div class="nav_item_container">
+                    <span class="icon">person</span>
+                    <a href="{% url 'about'%}">&nbsp;&nbsp;ABOUT</a>
+                </div>
+                <div class="nav_item_container">
+                    <span class="icon">work</span>
+                    <a href="{% url 'projects'%}">&nbsp;&nbsp;PROJECTS</a>
+                </div>
+                <div class="nav_item_container">
+                    <span class="icon">email</span>
+                    <a href="{% url 'contact' %}">&nbsp;&nbsp;CONTACTS</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="main_container">
+        {% block body %}
+        {% endblock %}
+        </div>
+
+
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>
