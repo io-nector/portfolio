@@ -40,7 +40,7 @@
   }
   .mobile_header .hamburger-menu span {
     height: 2px;
-    background: black;
+    background: #ababab;
     display: block;
   }
   .mobile_header #menu-toggle:checked ~ .nav_container {
@@ -232,165 +232,329 @@ body {
   overflow-x: hidden;
 }
 
-.about_container {
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-auto-rows: min-content;
+@media screen and (min-width: 900px) {
+  .about_container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: min-content;
+  }
+  .about_container .top_header {
+    grid-column: 1/-1;
+    grid-row: 1;
+    width: 90%;
+    height: 100%;
+    padding: 5rem 0 0 0;
+    margin: 0 0 0 5%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 1px dotted #ababab;
+  }
+  .about_container .top_header h1 {
+    color: #00a4e0;
+    font-family: "Roboto Serif", serif;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  .about_container .top_header .icon {
+    width: fit-content;
+    font-family: "Material Symbols Outlined", sans-serif;
+    font-size: 8rem;
+    font-weight: 100;
+    color: #00a4e0;
+    line-height: 0.8;
+  }
+  .about_container .top_description {
+    grid-column: 1/6;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    padding: 0 3% 0 3%;
+  }
+  .about_container .top_description h2 {
+    color: #2a2b30;
+    font-family: "Roboto Serif", serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 5% 0 5% 5%;
+  }
+  .about_container .top_description p {
+    color: #2a2b30;
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 0 5% 0 5%;
+  }
+  .about_container .top_description img {
+    width: auto;
+    height: 5rem;
+    margin: 0 0 0 3rem;
+  }
+  .about_container .personal_info {
+    width: 100%;
+    height: 100%;
+    grid-column: 6/-1;
+    grid-row: 2;
+  }
+  .about_container .personal_info h2 {
+    color: #2a2b30;
+    font-family: "Roboto Serif", serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 5% 0 5% 5%;
+  }
+  .about_container .personal_info ul li {
+    color: #2a2b30;
+    font-family: "Roboto Serif", serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1;
+    padding: 0 5% 5% 5%;
+    list-style: none;
+  }
+  .about_container .personal_info ul li span {
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #00a4e0;
+  }
+  .about_container .services_header {
+    grid-column: 1/-1;
+    grid-row: 3;
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about_container .services_header h2 {
+    position: relative;
+    color: #2a2b30;
+    font-family: "Roboto Serif", serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 0 3rem 0;
+    padding: 0 1rem 0 1rem;
+    border-bottom: 2px solid #00a4e0;
+  }
+  .about_container .services_header h2::before, .about_container .services_header h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 2px;
+    background-color: #00a4e0;
+  }
+  .about_container .services_header h2::before {
+    left: 0;
+  }
+  .about_container .services_header h2::after {
+    right: 0;
+  }
+  .about_container .service_container {
+    grid-column: span 2;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about_container .service_container .icon {
+    width: fit-content;
+    font-family: "Material Symbols Outlined", sans-serif;
+    font-size: 6rem;
+    vertical-align: middle;
+    font-weight: 200;
+    color: #00a4e0;
+  }
+  .about_container .service_container h2 {
+    color: #2a2b30;
+    font-family: "Roboto Serif", serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2;
+    text-align: center;
+  }
+  .about_container .service_container p {
+    color: #2a2b30;
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+  }
 }
-.about_container .top_header {
-  grid-column: 1/-1;
-  grid-row: 1;
-  width: 90%;
-  height: 100%;
-  padding: 5rem 0 0 0;
-  margin: 0 0 0 5%;
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  border-bottom: 1px dotted #ababab;
-}
-.about_container .top_header h1 {
-  color: #00a4e0;
-  font-family: "Roboto Serif", serif;
-  font-size: 4rem;
-  font-weight: 500;
-}
-.about_container .top_header .icon {
-  width: fit-content;
-  font-family: "Material Symbols Outlined", sans-serif;
-  font-size: 8rem;
-  font-weight: 100;
-  color: #00a4e0;
-  line-height: 0.8;
-}
-.about_container .top_description {
-  grid-column: 1/6;
-  grid-row: 2;
-  width: 100%;
-  height: 100%;
-  padding: 0 3% 0 3%;
-}
-.about_container .top_description h2 {
-  color: #2a2b30;
-  font-family: "Roboto Serif", serif;
-  font-size: 2.2rem;
-  font-weight: 500;
-  line-height: 1.5;
-  padding: 5% 0 5% 5%;
-}
-.about_container .top_description p {
-  color: #2a2b30;
-  font-family: "Inter", sans-serif;
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 1.8;
-  padding: 0 5% 0 5%;
-}
-.about_container .top_description img {
-  width: auto;
-  height: 5rem;
-  margin: 0 0 0 3rem;
-}
-.about_container .personal_info {
-  width: 100%;
-  height: 100%;
-  grid-column: 6/-1;
-  grid-row: 2;
-}
-.about_container .personal_info h2 {
-  color: #2a2b30;
-  font-family: "Roboto Serif", serif;
-  font-size: 2.2rem;
-  font-weight: 500;
-  line-height: 1.5;
-  padding: 5% 0 5% 5%;
-}
-.about_container .personal_info ul li {
-  color: #2a2b30;
-  font-family: "Roboto Serif", serif;
-  font-size: 1.4rem;
-  font-weight: 300;
-  line-height: 1;
-  padding: 0 5% 5% 5%;
-  list-style: none;
-}
-.about_container .personal_info ul li span {
-  font-weight: bold;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #00a4e0;
-}
-.about_container .services_header {
-  grid-column: 1/-1;
-  grid-row: 3;
-  width: 100%;
-  height: 100%;
-  padding: 0 0 0 0;
-  margin: 5rem 0 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.about_container .services_header h2 {
-  position: relative;
-  color: #2a2b30;
-  font-family: "Roboto Serif", serif;
-  font-size: 2.2rem;
-  font-weight: 500;
-  line-height: 1.5;
-  text-align: center;
-  margin: 0 0 3rem 0;
-  padding: 0 1rem 0 1rem;
-  border-bottom: 2px solid #00a4e0;
-}
-.about_container .services_header h2::before, .about_container .services_header h2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  height: 50%;
-  width: 2px;
-  background-color: #00a4e0;
-}
-.about_container .services_header h2::before {
-  left: 0;
-}
-.about_container .services_header h2::after {
-  right: 0;
-}
-.about_container .service_container {
-  grid-column: span 2;
-  padding: 0 5rem 0 5rem;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.about_container .service_container .icon {
-  width: fit-content;
-  font-family: "Material Symbols Outlined", sans-serif;
-  font-size: 6rem;
-  vertical-align: middle;
-  font-weight: 200;
-  color: #00a4e0;
-}
-.about_container .service_container h2 {
-  color: #2a2b30;
-  font-family: "Roboto Serif", serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 2;
-  text-align: center;
-}
-.about_container .service_container p {
-  color: #2a2b30;
-  font-family: "Inter", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 300;
-  text-align: center;
+@media screen and (max-width: 900px) {
+  .about_container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+  }
+  .about_container .top_header {
+    grid-column: span 1;
+    grid-row: 1;
+    width: 90%;
+    height: 100%;
+    padding: 5rem 0 0 0;
+    margin: 0 0 0 5%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 1px dotted #ababab;
+  }
+  .about_container .top_header h1 {
+    color: #00a4e0;
+    font-family: "Roboto Serif", serif;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  .about_container .top_header .icon {
+    width: fit-content;
+    font-family: "Material Symbols Outlined", sans-serif;
+    font-size: 8rem;
+    font-weight: 100;
+    color: #00a4e0;
+    line-height: 0.8;
+  }
+  .about_container .top_description {
+    grid-column: span 1;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    padding: 0 3% 0 3%;
+  }
+  .about_container .top_description h2 {
+    color: #2a2b30;
+    font-family: "Roboto Serif", serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 5% 0 5% 5%;
+  }
+  .about_container .top_description p {
+    color: #2a2b30;
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 0 5% 0 5%;
+  }
+  .about_container .top_description img {
+    width: auto;
+    height: 5rem;
+    margin: 0 0 0 3rem;
+  }
+  .about_container .personal_info {
+    width: 100%;
+    height: 100%;
+    grid-column: span 1;
+    grid-row: 3;
+  }
+  .about_container .personal_info h2 {
+    color: #2a2b30;
+    font-family: "Roboto Serif", serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 5% 0 5% 5%;
+  }
+  .about_container .personal_info ul li {
+    color: #2a2b30;
+    font-family: "Roboto Serif", serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1;
+    padding: 0 5% 5% 5%;
+    list-style: none;
+  }
+  .about_container .personal_info ul li span {
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #00a4e0;
+  }
+  .about_container .services_header {
+    grid-column: span 1;
+    grid-row: 4;
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 0;
+    margin: 5rem 0 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about_container .services_header h2 {
+    position: relative;
+    color: #2a2b30;
+    font-family: "Roboto Serif", serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    margin: 0 0 3rem 0;
+    padding: 0 1rem 0 1rem;
+    border-bottom: 2px solid #00a4e0;
+  }
+  .about_container .services_header h2::before, .about_container .services_header h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 2px;
+    background-color: #00a4e0;
+  }
+  .about_container .services_header h2::before {
+    left: 0;
+  }
+  .about_container .services_header h2::after {
+    right: 0;
+  }
+  .about_container .service_container {
+    grid-column: span 1;
+    margin: 2rem 0 0 0;
+    padding: 0 5rem 0 5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about_container .service_container .icon {
+    width: fit-content;
+    font-family: "Material Symbols Outlined", sans-serif;
+    font-size: 6rem;
+    vertical-align: middle;
+    font-weight: 200;
+    color: #00a4e0;
+  }
+  .about_container .service_container h2 {
+    color: #2a2b30;
+    font-family: "Roboto Serif", serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2;
+    text-align: center;
+  }
+  .about_container .service_container p {
+    color: #2a2b30;
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=about.css.map */

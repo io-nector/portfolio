@@ -2,215 +2,425 @@
 
 
 
-
-.about_container {
-    width: 100%;
-    height: 100%;
+@media screen and (min-width: 900px) {
+    .about_container {
+        width: 100%;
+        height: 100%;
+        
+        overflow-y: auto;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-auto-rows: min-content;
     
-    overflow-y: auto;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-auto-rows: min-content;
-
-    .top_header {
-        grid-column: 1 / -1;
-        grid-row: 1 ;
-        width: 90%;
-
-        height: 100%;
-
-        padding: 5rem 0 0 0;
-
-        margin:0 0 0 5%;
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-
-        border-bottom: 1px dotted $light_color;
-
-        h1 {
-            color: $accent_color;
-            font-family: $font_serif;
-            font-size: 4rem;
-            font-weight: 500;
+        .top_header {
+            grid-column: 1 / -1;
+            grid-row: 1 ;
+            width: 90%;
+    
+            height: 100%;
+    
+            padding: 5rem 0 0 0;
+    
+            margin:0 0 0 5%;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+    
+            border-bottom: 1px dotted $light_color;
+    
+            h1 {
+                color: $accent_color;
+                font-family: $font_serif;
+                font-size: 4rem;
+                font-weight: 500;
+            }
+    
+    
+            .icon {
+                width: fit-content;
+                font-family: 'Material Symbols Outlined', sans-serif;
+                font-size: 8.0rem;
+                font-weight: 100;
+                color: $accent_color;
+                line-height: .8;
+            }    
         }
-
-
-        .icon {
-            width: fit-content;
-            font-family: 'Material Symbols Outlined', sans-serif;
-            font-size: 8.0rem;
-            font-weight: 100;
-            color: $accent_color;
-            line-height: .8;
-        }    
-    }
-
-    .top_description {
-        grid-column: 1 / 6;
-        grid-row: 2;
-        
-        width: 100%;
-        height: 100%;
-        padding:0 3% 0 3%;
-        
-
-        h2 {
-            color: $dark_color;
-            font-family: $font_serif;
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 1.5;
-
-            padding: 5% 0 5% 5%;
-        }
-
-        p {
-            color: $dark_color;
-            font-family: $font_general;
-            font-size: 1.6rem;
-            font-weight: 300;
-            line-height: 1.8;                        padding: 0 5% 0 5% ;
-
-        }
-
-        img {
-
-            width: auto;
-            height: 5rem;
-            margin: 0 0 0 3rem;
-        }
-    }
-
-    .personal_info {
-        width: 100%;
-        height: 100%;
-        grid-column: 6/-1;
-        grid-row: 2;
-
-        h2 {
-            color: $dark_color;
-            font-family: $font_serif;
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 1.5;
-
-            padding: 5% 0 5% 5%;
-        }
-        
-        ul {
-            li {
+    
+        .top_description {
+            grid-column: 1 / 6;
+            grid-row: 2;
+            
+            width: 100%;
+            height: 100%;
+            padding:0 3% 0 3%;
+            
+    
+            h2 {
                 color: $dark_color;
                 font-family: $font_serif;
-                font-size: 1.4rem;
+                font-size: 2.2rem;
+                font-weight: 500;
+                line-height: 1.5;
+    
+                padding: 5% 0 5% 5%;
+            }
+    
+            p {
+                color: $dark_color;
+                font-family: $font_general;
+                font-size: 1.6rem;
                 font-weight: 300;
-                line-height: 1;                        padding: 0 5% 5% 5% ;
-                list-style: none;
-
-                span {
-                    font-weight: bold;
-                    // text-decoration: underline;
-                    // line-height: ;
-                    padding-bottom: 5px;
-                    border-bottom: 2px solid $accent_color;
+                line-height: 1.8;                        padding: 0 5% 0 5% ;
+    
+            }
+    
+            img {
+    
+                width: auto;
+                height: 5rem;
+                margin: 0 0 0 3rem;
+            }
+        }
+    
+        .personal_info {
+            width: 100%;
+            height: 100%;
+            grid-column: 6/-1;
+            grid-row: 2;
+    
+            h2 {
+                color: $dark_color;
+                font-family: $font_serif;
+                font-size: 2.2rem;
+                font-weight: 500;
+                line-height: 1.5;
+    
+                padding: 5% 0 5% 5%;
+            }
+            
+            ul {
+                li {
+                    color: $dark_color;
+                    font-family: $font_serif;
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    line-height: 1;                        padding: 0 5% 5% 5% ;
+                    list-style: none;
+    
+                    span {
+                        font-weight: bold;
+                        // text-decoration: underline;
+                        // line-height: ;
+                        padding-bottom: 5px;
+                        border-bottom: 2px solid $accent_color;
+                    }
                 }
             }
         }
-    }
-
-    .services_header {
-        grid-column: 1 / -1;
-        grid-row: 3;
-        
-        width: 100%;
-        height: 100%;
-
-        padding: 0 0 0 0;
-        margin:5rem 0 0 0;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-
-        h2 {
-            position: relative;
-            color: $dark_color;
-            font-family: $font_serif;
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 1.5;
-            text-align: center;
-            margin: 0 0 3rem 0;
-            padding: 0 1rem 0 1rem;
-
-            border-bottom: 2px solid $accent_color;
+    
+        .services_header {
+            grid-column: 1 / -1;
+            grid-row: 3;
             
-            &::before, &::after {
-                content: "";
-                position: absolute;
-                bottom: 0; // Adjust this to move the borders up or down
-                height: 50%; // This is the height of the borders
-                width: 2px; // This is the width of the borders
-                background-color: $accent_color; // This is the color of the borders
-            }
-        
-            &::before {
-                left: 0; // Position the left border
-            }
-        
-            &::after {
-                right: 0; // Position the right border
-            }
-        
+            width: 100%;
+            height: 100%;
+    
+            padding: 0 0 0 0;
+            // margin:5rem 0 0 0;
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+    
+            h2 {
+                position: relative;
+                color: $dark_color;
+                font-family: $font_serif;
+                font-size: 2.2rem;
+                font-weight: 500;
+                line-height: 1.5;
+                text-align: center;
+                margin: 0 0 3rem 0;
+                padding: 0 1rem 0 1rem;
+    
+                border-bottom: 2px solid $accent_color;
+                
+                &::before, &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0; // Adjust this to move the borders up or down
+                    height: 50%; // This is the height of the borders
+                    width: 2px; // This is the width of the borders
+                    background-color: $accent_color; // This is the color of the borders
+                }
             
-
+                &::before {
+                    left: 0; // Position the left border
+                }
+            
+                &::after {
+                    right: 0; // Position the right border
+                }
+            
+                
+    
+            }
+    
         }
-
-    }
-
-    .service_container {
-        grid-column: span 2;
-
-        padding: 0 5rem 0 5rem;
-        
-        width: 100%;
-        height: 100%;
-
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        .icon {
-            width: fit-content;
-            font-family: 'Material Symbols Outlined', sans-serif;
-            font-size: 6.0rem;
-            vertical-align: middle;
-            font-weight: 200;
-            color: $accent_color;
-        }      
-
-        h2 {
-            color: $dark_color;
-            font-family: $font_serif;
-            font-size: 1.6rem;
-            font-weight: 400;
-            line-height: 2;
-            text-align: center;
+    
+        .service_container {
+            grid-column: span 2;
+    
+            // padding: 0 5rem 0 5rem;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+    
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+    
+            .icon {
+                width: fit-content;
+                font-family: 'Material Symbols Outlined', sans-serif;
+                font-size: 6.0rem;
+                vertical-align: middle;
+                font-weight: 200;
+                color: $accent_color;
+            }      
+    
+            h2 {
+                color: $dark_color;
+                font-family: $font_serif;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2;
+                text-align: center;
+            }
+    
+            p {
+                color: $dark_color;
+                font-family: $font_general;
+                font-size: 1.4rem;
+                font-weight: 300;
+                // line-height: 1.8;                        padding: 0 5% 5% 5% ;
+                text-align: center;
+            }
         }
-
-        p {
-            color: $dark_color;
-            font-family: $font_general;
-            font-size: 1.4rem;
-            font-weight: 300;
-            // line-height: 1.8;                        padding: 0 5% 5% 5% ;
-            text-align: center;
-        }
-    }
-
-
-
+    }   
 }
 
+
+@media screen and (max-width: 900px) {
+    .about_container {
+        width: 100%;
+        height: 100%;
+        
+        overflow-y: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+    
+        .top_header {
+            grid-column: span 1;
+            grid-row: 1 ;
+            width: 90%;
+    
+            height: 100%;
+    
+            padding: 5rem 0 0 0;
+    
+            margin:0 0 0 5%;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+    
+            border-bottom: 1px dotted $light_color;
+    
+            h1 {
+                color: $accent_color;
+                font-family: $font_serif;
+                font-size: 4rem;
+                font-weight: 500;
+            }
+    
+    
+            .icon {
+                width: fit-content;
+                font-family: 'Material Symbols Outlined', sans-serif;
+                font-size: 8.0rem;
+                font-weight: 100;
+                color: $accent_color;
+                line-height: .8;
+            }    
+        }
+    
+        .top_description {
+            grid-column: span 1;
+            grid-row: 2;
+            
+            width: 100%;
+            height: 100%;
+            padding:0 3% 0 3%;
+            
+    
+            h2 {
+                color: $dark_color;
+                font-family: $font_serif;
+                font-size: 2.2rem;
+                font-weight: 500;
+                line-height: 1.5;
+    
+                padding: 5% 0 5% 5%;
+            }
+    
+            p {
+                color: $dark_color;
+                font-family: $font_general;
+                font-size: 1.6rem;
+                font-weight: 300;
+                line-height: 1.8;                        padding: 0 5% 0 5% ;
+    
+            }
+    
+            img {
+    
+                width: auto;
+                height: 5rem;
+                margin: 0 0 0 3rem;
+            }
+        }
+    
+        .personal_info {
+            width: 100%;
+            height: 100%;
+            grid-column: span 1;
+            grid-row: 3;
+
+    
+            h2 {
+                color: $dark_color;
+                font-family: $font_serif;
+                font-size: 2.2rem;
+                font-weight: 500;
+                line-height: 1.5;
+    
+                padding: 5% 0 5% 5%;
+            }
+            
+            ul {
+                li {
+                    color: $dark_color;
+                    font-family: $font_serif;
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    line-height: 1;                        padding: 0 5% 5% 5% ;
+                    list-style: none;
+    
+                    span {
+                        font-weight: bold;
+                        // text-decoration: underline;
+                        // line-height: ;
+                        padding-bottom: 5px;
+                        border-bottom: 2px solid $accent_color;
+                    }
+                }
+            }
+        }
+    
+        .services_header {
+            grid-column: span 1;
+            grid-row: 4;
+            
+            width: 100%;
+            height: 100%;
+    
+            padding: 0 0 0 0;
+            margin:5rem 0 5rem 0;
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+    
+            h2 {
+                position: relative;
+                color: $dark_color;
+                font-family: $font_serif;
+                font-size: 2.2rem;
+                font-weight: 500;
+                line-height: 1.5;
+                text-align: center;
+                margin: 0 0 3rem 0;
+                padding: 0 1rem 0 1rem;
+    
+                border-bottom: 2px solid $accent_color;
+                
+                &::before, &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0; // Adjust this to move the borders up or down
+                    height: 50%; // This is the height of the borders
+                    width: 2px; // This is the width of the borders
+                    background-color: $accent_color; // This is the color of the borders
+                }
+            
+                &::before {
+                    left: 0; // Position the left border
+                }
+            
+                &::after {
+                    right: 0; // Position the right border
+                }
+            
+                
+    
+            }
+    
+        }
+    
+        .service_container {
+            grid-column: span 1;
+            
+            margin: 2rem 0 0 0;
+            padding: 0 5rem 0 5rem;
+            
+            width: 100%;
+            height: 100%;
+    
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+    
+            .icon {
+                width: fit-content;
+                font-family: 'Material Symbols Outlined', sans-serif;
+                font-size: 6.0rem;
+                vertical-align: middle;
+                font-weight: 200;
+                color: $accent_color;
+            }      
+    
+            h2 {
+                color: $dark_color;
+                font-family: $font_serif;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 2;
+                text-align: center;
+            }
+    
+            p {
+                color: $dark_color;
+                font-family: $font_general;
+                font-size: 1.4rem;
+                font-weight: 300;
+                // line-height: 1.8;                        padding: 0 5% 5% 5% ;
+                text-align: center;
+            }
+        }
+    }   
+}

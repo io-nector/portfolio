@@ -40,7 +40,7 @@
   }
   .mobile_header .hamburger-menu span {
     height: 2px;
-    background: black;
+    background: #ababab;
     display: block;
   }
   .mobile_header #menu-toggle:checked ~ .nav_container {
