@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@100..900&display=swap');
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 $darker_color: #1a1b1f;
@@ -10,4 +12,5 @@ $light_color: #ababab;
 $lighter_color: #dfdfdf;
 $dark_text: #555;
 $font_general:'Inter', sans-serif;
-$font_serif: 'Inria Serif', serif;
+// $font_serif: 'Inria Serif', serif;
+$font_serif: 'Roboto Serif', serif;

@@ -17,12 +17,57 @@
 
     </head>
     <body>
+        <div class="mobile_header">
+            <h1>
+                DEAN WATSON
+            </h1>
+
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="nav_container">
+
+                <div class="profile_image_container">
+                    <img  src="{% static 'portfolio/images/blue-bg.png' %}" alt="">
+    
+                    <h1>Dean Watson</h1>
+                </div>
+    
+    
+                <nav>
+                    <div class="nav_item_container">
+                        <span class="icon">house</span>
+                        <a href="{% url 'index' %}">&nbsp;&nbsp;HOME</a>
+                    </div>
+                    <div class="nav_item_container">
+                        <span class="icon">person</span>
+                        <a href="{% url 'about'%}">&nbsp;&nbsp;ABOUT</a>
+                    </div>
+                    <div class="nav_item_container">
+                        <span class="icon">work</span>
+                        <a href="{% url 'projects'%}">&nbsp;&nbsp;PROJECTS</a>
+                    </div>
+                    <div class="nav_item_container">
+                        <span class="icon">email</span>
+                        <a href="{% url 'contact' %}">&nbsp;&nbsp;CONTACTS</a>
+                    </div>
+                </nav>
+            </div>
+    
+        </div>
+
         <div class="nav_container">
+
             <div class="profile_image_container">
                 <img  src="{% static 'portfolio/images/blue-bg.png' %}" alt="">
 
                 <h1>Dean Watson</h1>
             </div>
+
+
             <nav>
                 <div class="nav_item_container">
                     <span class="icon">house</span>

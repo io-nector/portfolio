@@ -8,10 +8,7 @@
   margin: 0;
 }
 
-.accent {
-  color: $accent_color;
 
-}
 
 html {
     font-size: 62.5%;
@@ -23,7 +20,7 @@ html {
 body {
     width: 100vw;
     min-height: 100vh;
-    background-color: $dark_color;
+    // background-color: $dark_color;
     overflow-y: hidden;
     overflow-x: hidden;
 
