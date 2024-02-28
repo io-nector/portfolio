@@ -126,3 +126,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Configure Django App for Heroku.
+#https://pypi.org/project/django-heroku/
+import django_heroku
+django_heroku.settings(locals())
